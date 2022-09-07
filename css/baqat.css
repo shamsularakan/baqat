@@ -1,0 +1,232 @@
+:root{
+    --primary-color:#eb5e28;
+    --secondary-color:#ccc5b9;
+    --third-color:#403d39;
+    --section-color: #fffcf2;
+    --dark-color:#252422;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Tajawal', sans-serif;
+    
+}
+.container{
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+/*  Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .container{
+        width: 570px ;
+    }
+    
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container{
+        width: 750px;
+    } 
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .container{
+        width: 970px;
+    }
+}
+
+/*  Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .container{
+        width: 1170px;
+    }
+}
+/*end global rules */
+/* start nav */
+nav{
+    background-color: var(--section-color);
+    display: flex;
+    
+    justify-content: space-between;
+    
+}
+nav .container{
+    padding-top: 15px;
+    padding-bottom: 15px ;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+nav .brand{
+    text-decoration: none;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+}
+nav .bar{
+    
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    
+}
+@media (min-width: 768px) {
+    nav .bar{
+        display: none;
+    }
+    
+}
+nav .bar span{
+    
+    height: 3px;
+    width: 25px;
+    background-color: var(--third-color);
+    margin-bottom: 5px; 
+}
+nav .bar:hover span{
+    background-color: var(--secondary-color);
+}
+
+nav .link{
+    display: flex;
+}
+@media (max-width: 768px) {
+    nav .link{
+        display: none;
+    }
+    nav .link + .bar:hover{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+nav .link li{
+    list-style: none;
+    display: inline-block;
+
+}
+nav .link a{
+    text-decoration: none;
+    color: var(--dark-color);
+    margin-left: 20px;
+    padding: 5px 15px;
+    border-radius: 20px;
+
+}
+nav .link a.active{
+    background-color: var(--secondary-color);
+
+}
+nav .link a.active:hover{
+    background-color: var(--dark-color);
+    color: var(--section-color);
+}
+.planing{
+    background-color: var(--section-color);
+    padding-top: 20px;
+}
+.planing>h2{
+    color: var(--third-color);
+    text-align: center;
+    
+    margin-bottom: 5px;
+}
+.planing .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    
+    padding-bottom: 30px;
+    grid-gap:40px ;
+    padding-top: 30px;
+}
+.planing .container .plan{
+    border: 1px solid var(--primary-color);
+    border-radius: 25px;
+    
+    
+}
+.planing .container .plan h3{
+    margin-top: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    background-color: #eb5e28;
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.planing .container .plan:nth-child(2){
+    position: relative;
+}
+.planing .container .plan:nth-child(2)::after{
+    position: absolute;
+    content: attr(data-host);
+    top: -15px;
+    right: 20px;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    z-index: 3;
+}
+.planing .container .plan:nth-child(2) h3{
+    background-color: var(--dark-color);
+    color: var(--section-color);
+}
+
+.row{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.row a{
+    text-align: center;
+    text-decoration: none;
+    
+    color: var(--section-color);
+    background-color: var(--dark-color);
+    width: 100px;
+    display: block;
+    padding: 10px 0;
+    margin-left: 20px ;
+    box-shadow: 5px 5px #888888;
+    
+}
+.row a:hover{
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+}
+.contact{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+    
+}
+.contact a{
+    color: var(--third-color);
+}
+.fa-phone{
+    justify-content: flex-start;
+    margin-left: 3px;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
