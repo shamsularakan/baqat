@@ -1,9 +1,9 @@
 :root{
-    --primary-color:#eb5e28;
+    --primary-color:#1C6758;
     --secondary-color:#ccc5b9;
     --third-color:#403d39;
     --section-color: #fffcf2;
-    --dark-color:#252422;
+    --dark-color:#1C6758;
 }
 body{
     margin: 0;
@@ -148,14 +148,20 @@ nav .link a.active:hover{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     grid-gap:40px ;
-    padding-top: 30px;
+    padding-top: 50px;
 }
 .planing .container .plan{
     border: 1px solid var(--primary-color);
-    border-radius: 25px;
-    
+    border-radius: 15px;
+    transition: 0.3s;
+    padding-bottom: 15px;
+}
+.planing .container .plan:hover{
+    border: 1px solid var(--primary-color);
+    box-shadow: 5px 5px var(--third-color);
+    transform: scale(1.1);
     
 }
 .planing .container .plan h3{
@@ -165,8 +171,23 @@ nav .link a.active:hover{
     width: 100%;
     background-color: #eb5e28;
     text-align: center;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.planing .container .plan h2{
+    font-size: 50px;
+    text-align: center;
+}
+.planing .container .plan h2 small{
+    font-size: 15px;
+}
+.planing .container .plan ul li{
+    line-height: 2;
+}
+.planing .container .plan p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 15px;
 }
 .planing .container .plan:nth-child(2){
     position: relative;
@@ -178,7 +199,8 @@ nav .link a.active:hover{
     right: 20px;
     padding: 5px 10px;
     background-color: var(--primary-color);
-    z-index: 3;
+    z-index: 1;
+    border-radius: 4px;
 }
 .planing .container .plan:nth-child(2) h3{
     background-color: var(--dark-color);
